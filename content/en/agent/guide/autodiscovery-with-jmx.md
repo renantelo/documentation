@@ -57,7 +57,7 @@ The autodiscovery annotations logic consists in applying the JMX check configura
                   -Dcom.sun.management.jmxremote.local.only=false
                   -Dcom.sun.management.jmxremote.port=<JMX_PORT>
                   -Dcom.sun.management.jmxremote.rmi.port=<JMX_PORT>
-                  -Djava.rmi.server.hostname=$(POD_IP)
+                  -Djava.rmi.server.hostname=${POD_IP}
     ```
 
       The `JAVA_OPTS` environment variable needs to be created, so that your JMX server allows the agent to connect to the RMI registry.
@@ -113,7 +113,7 @@ spec:
                 -Dcom.sun.management.jmxremote.local.only=false
                 -Dcom.sun.management.jmxremote.port=9012
                 -Dcom.sun.management.jmxremote.rmi.port=9012
-                -Djava.rmi.server.hostname=$(POD_IP)
+                -Djava.rmi.server.hostname=${POD_IP}
 ```
 
 ## Autodiscovery container identifiers
